@@ -12,7 +12,7 @@ add_definitions(-D__APPLE__ -D__DYNAMIC__)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(dighost OBJECT dighost.c)
+add_darling_object_library(dighost dighost.c)
 
 add_darling_executable(dig dig.c $<TARGET_OBJECTS:dighost> $<TARGET_OBJECTS:bind9> $<TARGET_OBJECTS:isccfg> $<TARGET_OBJECTS:isc> $<TARGET_OBJECTS:bind9-dns> $<TARGET_OBJECTS:lwres>)
 add_darling_executable(host host.c $<TARGET_OBJECTS:dighost> $<TARGET_OBJECTS:bind9> $<TARGET_OBJECTS:isccfg> $<TARGET_OBJECTS:isc> $<TARGET_OBJECTS:bind9-dns> $<TARGET_OBJECTS:lwres>)

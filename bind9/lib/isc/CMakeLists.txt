@@ -84,5 +84,5 @@ set(isc_sources
 	nls/msgcat.c
 )
 
-add_library(isc OBJECT ${isc_sources})
+add_darling_object_library(isc ${isc_sources})
 

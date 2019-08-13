@@ -25,5 +25,5 @@ set(lwres_sources
 	version.c
 )
 
-add_library(lwres OBJECT ${lwres_sources})
+add_darling_object_library(lwres ${lwres_sources})
 

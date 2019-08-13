@@ -84,5 +84,5 @@ set(dns_sources
 	zt.c
 )
 
-add_library(bind9-dns OBJECT ${dns_sources})
+add_darling_object_library(bind9-dns ${dns_sources})
 
