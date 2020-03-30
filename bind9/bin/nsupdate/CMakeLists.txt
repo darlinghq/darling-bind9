@@ -8,8 +8,6 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 include(darling_exe)
-add_definitions(-DTARGET_OS_MAC=1)
-add_definitions(-D__APPLE__ -D__DYNAMIC__)
 add_definitions(-DSESSION_KEYFILE="/private/run/named/session.key")
 
 add_darling_executable(nsupdate nsupdate.c $<TARGET_OBJECTS:bind9> $<TARGET_OBJECTS:isccfg> $<TARGET_OBJECTS:isc> $<TARGET_OBJECTS:bind9-dns> $<TARGET_OBJECTS:lwres>)
