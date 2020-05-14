@@ -15,7 +15,6 @@ include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/bind9/lib/lwres/unix/include
 	${CMAKE_CURRENT_SOURCE_DIR}/bind9/lib/bind9/include
 	${CMAKE_CURRENT_SOURCE_DIR}/bind9
-	${CMAKE_SOURCE_DIR}/src/libedit/src
 )
 
 add_subdirectory(bind9/lib/bind9)
