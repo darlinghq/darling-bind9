@@ -1,12 +1,30 @@
 project(bind9-dns)
 
-set(dns_sources
+include_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}/../../../gen/lib/dns
+	${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+add_compile_definitions(
+	USE_MD5
+	GSSAPI
+	USE_ISC_SPNEGO
+
+	MAJOR="9.10"
+	MAPAPI="1.1"
+	LIBINTERFACE=190
+	LIBREVISION=1
+	LIBAGE=0
+)
+
+add_darling_static_library(bind9_dns FAT SOURCES
 	acache.c
 	acl.c
 	adb.c
 	byaddr.c
 	cache.c
 	callbacks.c
+	client.c
 	clientinfo.c
 	compress.c
 	db.c
@@ -22,6 +40,7 @@ set(dns_sources
 	dst_lib.c
 	dst_parse.c
 	dst_result.c
+	ecdb.c
 	forward.c
 	gssapi_link.c
 	gssapictx.c
@@ -60,12 +79,13 @@ set(dns_sources
 	rootns.c
 	rpz.c
 	rriterator.c
+	rrl.c
 	sdb.c
 	sdlz.c
 	soa.c
 	spnego.c
-	ssu.c
 	ssu_external.c
+	ssu.c
 	stats.c
 	tcpmsg.c
 	time.c
@@ -83,6 +103,4 @@ set(dns_sources
 	zonekey.c
 	zt.c
 )
-
-add_darling_object_library(bind9-dns ${dns_sources})
 

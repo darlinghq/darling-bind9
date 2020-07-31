@@ -1,16 +1,26 @@
 project(isc)
 
-set(isc_sources
+add_compile_definitions(
+	PK11_LIB_LOCATION="undefined"
+
+	LIBINTERFACE=190
+	LIBREVISION=0
+	LIBAGE=1
+)
+
+add_darling_static_library(bind9_isc FAT SOURCES
+	aes.c
 	assertions.c
-	backtrace.c
 	backtrace-emptytbl.c
+	backtrace.c
 	base32.c
 	base64.c
-	bitstring.c
+	bind9.c
 	buffer.c
 	bufferlist.c
 	commandline.c
 	counter.c
+	crc64.c
 	error.c
 	event.c
 	hash.c
@@ -20,7 +30,6 @@ set(isc_sources
 	hmacsha.c
 	httpd.c
 	inet_aton.c
-	inet_ntop.c
 	inet_pton.c
 	iterated_hash.c
 	lex.c
@@ -36,7 +45,6 @@ set(isc_sources
 	parseint.c
 	pool.c
 	portset.c
-	print.c
 	quota.c
 	radix.c
 	random.c
@@ -63,11 +71,11 @@ set(isc_sources
 	unix/app.c
 	unix/dir.c
 	unix/entropy.c
+	unix/errno.c
 	unix/errno2result.c
 	unix/file.c
 	unix/fsaccess.c
 	unix/interfaceiter.c
-	unix/ipv6.c
 	unix/keyboard.c
 	unix/net.c
 	unix/os.c
@@ -83,6 +91,3 @@ set(isc_sources
 	pthreads/thread.c
 	nls/msgcat.c
 )
-
-add_darling_object_library(isc ${isc_sources})
-

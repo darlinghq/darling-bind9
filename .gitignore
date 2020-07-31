@@ -1,0 +1,15 @@
+*.o
+*.a
+*.log
+
+/gen/bin/dig/dig
+/gen/bin/dig/host
+/gen/bin/dig/nslookup
+/gen/bin/nsupdate/nsupdate
+/gen/bin/delv/delv
+/gen/lib/samples/nsprobe
+/gen/lib/samples/resolve
+/gen/lib/samples/sample-async
+/gen/lib/samples/sample-gai
+/gen/lib/samples/sample-request
+/gen/lib/samples/sample-update

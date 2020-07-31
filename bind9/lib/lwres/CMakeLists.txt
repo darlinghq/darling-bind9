@@ -1,6 +1,12 @@
-project(lwres)
+project(bind9-lwres)
 
-set(lwres_sources
+add_compile_definitions(
+	LIBINTERFACE=141
+	LIBREVISION=3
+	LIBAGE=0
+)
+
+add_darling_static_library(bind9_lwres FAT SOURCES
 	compat.c
 	context.c
 	gai_strerror.c
@@ -24,6 +30,3 @@ set(lwres_sources
 	print.c
 	version.c
 )
-
-add_darling_object_library(lwres ${lwres_sources})
-
