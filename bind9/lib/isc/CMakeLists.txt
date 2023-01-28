@@ -45,6 +45,7 @@ add_darling_static_library(bind9_isc FAT SOURCES
 	parseint.c
 	pool.c
 	portset.c
+	print.c
 	quota.c
 	radix.c
 	random.c

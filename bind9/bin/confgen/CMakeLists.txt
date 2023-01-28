@@ -41,6 +41,9 @@ target_link_libraries(ddns-confgen
 	IOKit
 	CoreFoundation
 	Kerberos
+
+	# Apple doesn't seems to require this, but build error seems to occur without this.
+	xml2
 )
 
 install(TARGETS ddns-confgen DESTINATION libexec/darling/usr/sbin)

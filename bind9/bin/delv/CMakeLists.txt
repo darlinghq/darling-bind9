@@ -16,6 +16,9 @@ target_link_libraries(delv
 	IOKit
 	CoreFoundation
 	Kerberos
+
+	# Apple doesn't seems to require this, but build error seems to occur without this.
+	xml2
 )
 
 install(TARGETS delv DESTINATION libexec/darling/usr/bin)
