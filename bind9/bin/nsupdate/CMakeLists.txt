@@ -29,6 +29,9 @@ target_link_libraries(nsupdate
 
 	IOKit
 	CoreFoundation
+
+	# Apple doesn't seems to require this, but build error seems to occur without this.
+	xml2
 )
 
 install(TARGETS nsupdate DESTINATION libexec/darling/usr/bin)

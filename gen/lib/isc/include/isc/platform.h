@@ -162,7 +162,7 @@
  * If this system needs vsnprintf() and snprintf(), ISC_PLATFORM_NEEDVSNPRINTF
  * will be defined.
  */
-#undef ISC_PLATFORM_NEEDVSNPRINTF
+#define ISC_PLATFORM_NEEDVSNPRINTF 1
 
 /*! \brief
  * If this system need a modern sprintf() that returns (int) not (char*).
@@ -172,17 +172,17 @@
 /*! \brief
  * If this system need a modern printf() that format size %z (size_t).
  */
-#undef ISC_PLATFORM_NEEDPRINTF
+#define ISC_PLATFORM_NEEDPRINTF 1
 
 /*! \brief
  * If this system need a modern fprintf() that format size %z (size_t).
  */
-#undef ISC_PLATFORM_NEEDFPRINTF
+#define ISC_PLATFORM_NEEDFPRINTF 1
 
 /*! \brief
  * The printf format string modifier to use with isc_uint64_t values.
  */
-#define ISC_PLATFORM_QUADFORMAT "ll"
+#define ISC_PLATFORM_QUADFORMAT "l"
 
 /***
  *** String functions.

@@ -29,7 +29,7 @@ if os.name == 'nt':
 
 def prefix(bindir=''):
     if os.name != 'nt':
-        return os.path.join('/usr', bindir)
+        return os.path.join('/usr/local', bindir)
 
     hklm = win32con.HKEY_LOCAL_MACHINE
     bind_subkey = "Software\\ISC\\BIND"
@@ -76,6 +76,6 @@ def shellquote(s):
 
 version = '9.10.6'
 if os.name != 'nt':
-    sysconfdir = '/private/etc'
+    sysconfdir = '/etc'
 else:
     sysconfdir = prefix('etc')

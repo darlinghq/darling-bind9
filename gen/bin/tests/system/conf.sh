@@ -80,7 +80,7 @@ SUBDIRS="acl additional allow_query addzone autosign builtin
 	 dscp ecdsa ednscompliance emptyzones fetchlimit filter-aaaa
 	 formerr forward geoip glue gost ixfr inline integrity
 	 legacy limits logfileconfig lwresd masterfile masterformat
-	 metadata notify nslookup nsupdate pending 
+	 metadata notify nslookup nsupdate pending pkcs11
 	 reclimit redirect resolver rndc rpz rpzrecurse rrl rrchecker
 	 rrsetorder rsabigexponent smartsign sortlist spf staticstub
 	 statistics statschannel stub tcp tkey tsig tsiggss unknown
@@ -124,13 +124,13 @@ else
 fi
 
 
-PYTHON=/usr/bin/python
+PYTHON=/usr/bin/python3
 
 #
 # Determine if we support various optional features.
 #
 CHECK_DSA=1
-HAVEXMLSTATS=
+HAVEXMLSTATS=1
 HAVEJSONSTATS=
 ZLIB=@ZLIB@
 

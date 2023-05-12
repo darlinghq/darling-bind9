@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 ############################################################################
 # Copyright (C) 2012-2016  Internet Systems Consortium, Inc. ("ISC")
 #
@@ -20,7 +20,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(sys.argv[0]))
 if os.name != 'nt':
-    sys.path.insert(1, os.path.join('/usr', 'lib',
+    sys.path.insert(1, os.path.join('/usr/local', 'lib',
 		    'python' + sys.version[:3], 'site-packages'))
 
 import isc.checkds

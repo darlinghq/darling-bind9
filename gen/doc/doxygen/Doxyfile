@@ -117,7 +117,7 @@ FULL_PATH_NAMES        = YES
 # If left blank the directory from which doxygen is run is used as the 
 # path to strip.
 
-STRIP_FROM_PATH        = /Users/ariel/git/darling/src/external/bind9/gen/
+STRIP_FROM_PATH        = /Volumes/CaseSensitive/git/darling-bind9/gen/
 
 # The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of 
 # the path mentioned in the documentation of a class, which tells 
@@ -461,18 +461,18 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = /Users/ariel/git/darling/src/external/bind9/gen/lib/isc		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/lib/dns		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/lib/isccfg	\
-			 /Users/ariel/git/darling/src/external/bind9/gen/lib/isccc		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/lib/bind9		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/check		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/dig		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/dnssec	\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/named		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/nsupdate	\
-			 /Users/ariel/git/darling/src/external/bind9/gen/bin/rndc		\
-			 /Users/ariel/git/darling/src/external/bind9/gen/doc/doxygen/mainpage
+INPUT                  = /Volumes/CaseSensitive/git/darling-bind9/gen/lib/isc		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/lib/dns		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccfg	\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccc		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/lib/bind9		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/check		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/dig		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/dnssec	\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/named		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/nsupdate	\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/bin/rndc		\
+			 /Volumes/CaseSensitive/git/darling-bind9/gen/doc/doxygen/mainpage
 
 # If the value of the INPUT tag contains directories, you can use the 
 # FILE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp 

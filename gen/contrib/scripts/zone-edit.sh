@@ -20,7 +20,7 @@ dir=/tmp/zone-edit.$$
 mkdir ${dir} || exit 1
 trap "/bin/rm -rf ${dir}" 0
 
-prefix=/usr
+prefix=/usr/local
 exec_prefix=${prefix}
 bindir=${exec_prefix}/bin
 sbindir=${exec_prefix}/sbin

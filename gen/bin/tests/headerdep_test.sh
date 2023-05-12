@@ -22,7 +22,7 @@
 # depends on another header having been included first.
 #
 
-prefix=/usr
+prefix=/usr/local
 tmp=/tmp/thdr$$.tmp
 
 status=0

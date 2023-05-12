@@ -39,36 +39,36 @@ top_srcdir =	../../../../../bind9
 # latter case, because there are no machine-generated OS-specific
 # headers.
 
-ISC_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isc/include \
+ISC_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isc/include \
 	-I${top_srcdir}/lib/isc \
 	-I${top_srcdir}/lib/isc/include \
 	-I${top_srcdir}/lib/isc/unix/include \
 	-I${top_srcdir}/lib/isc/pthreads/include \
 	-I${top_srcdir}/lib/isc/noatomic/include
 
-ISCCC_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isccc/include \
+ISCCC_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccc/include \
        -I${top_srcdir}/lib/isccc/include
 
-ISCCFG_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isccfg/include \
+ISCCFG_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccfg/include \
        -I${top_srcdir}/lib/isccfg/include
 
-DNS_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/dns/include \
+DNS_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/dns/include \
 	-I${top_srcdir}/lib/dns/include
 
-IRS_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/irs/include \
+IRS_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/irs/include \
 	-I${top_srcdir}/lib/irs/include
 
-LWRES_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/lwres/include \
+LWRES_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/lwres/include \
 	-I${top_srcdir}/lib/lwres/unix/include \
 	-I${top_srcdir}/lib/lwres/include
 
-BIND9_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/bind9/include \
+BIND9_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/bind9/include \
 	-I${top_srcdir}/lib/bind9/include
 
 TEST_INCLUDES = \
 	-I${top_srcdir}/lib/tests/include
 
-PYTHON	=	/usr/bin/python
+PYTHON	=	/usr/bin/python3
 
 PYTESTS =	dnskey_test.py
 
@@ -97,22 +97,22 @@ PYTESTS =	dnskey_test.py
 ### Note: paths that vary by Makefile MUST NOT be listed
 ### here, or they won't get expanded correctly.
 
-prefix =	/usr
+prefix =	/usr/local
 exec_prefix =	${prefix}
 bindir =	${exec_prefix}/bin
 sbindir =	${exec_prefix}/sbin
-includedir =	/usr/local/include
-libdir =	/usr/local
-sysconfdir =	/private/etc
-localstatedir =	/private/var
-mandir =	/usr/share/man
+includedir =	${prefix}/include
+libdir =	${exec_prefix}/lib
+sysconfdir =	/etc
+localstatedir =	/var
+mandir =	${datarootdir}/man
 datarootdir =   ${prefix}/share
 
 DESTDIR =
 
 
 
-top_builddir =	/Users/ariel/git/darling/src/external/bind9/gen
+top_builddir =	/Volumes/CaseSensitive/git/darling-bind9/gen
 
 ###
 ### All
@@ -181,18 +181,18 @@ install uninstall clean distclean maintainer-clean doc docclean man manclean::
 ### User may define externally
 ###     EXT_CFLAGS
 
-CC = 		/Users/ariel/private-bin/clang
-CFLAGS =	-arch x86_64 -arch i386 -g -std=gnu89
-LDFLAGS =	-framework IOKit -framework CoreFoundation
+CC = 		gcc
+CFLAGS =	-g -O2 -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+LDFLAGS =	
 STD_CINCLUDES =	
 STD_CDEFINES =	 -D__APPLE_USE_RFC_3542
 STD_CWARNINGS =	 -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing -fno-delete-null-pointer-checks
 
-BUILD_CC = /Users/ariel/private-bin/clang
-BUILD_CFLAGS = -arch x86_64 -arch i386 -g -std=gnu89
-BUILD_CPPFLAGS = -isystem/Users/ariel/git/darling/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -isystem/Users/ariel/arch/build/darling/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -isystem/Users/ariel/git/darling/framework-include -DDARLING -D__APPLE_USE_RFC_3542 
-BUILD_LDFLAGS =  -framework IOKit -framework CoreFoundation
-BUILD_LIBS = -ldl -lpthread 
+BUILD_CC = gcc
+BUILD_CFLAGS = -g -O2 -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
+BUILD_CPPFLAGS =  -D__APPLE_USE_RFC_3542 
+BUILD_LDFLAGS = 
+BUILD_LIBS = -ldl -lpthread  -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -lxml2 -lz -lpthread -licucore -lm
 
 .SUFFIXES:
 .SUFFIXES: .c .o
@@ -386,8 +386,8 @@ INSTALL_LIBRARY =	${INSTALL_DATA}
 XSLTPROC =		/usr/bin/xsltproc --novalid --xinclude --nonet
 XMLLINT =		/usr/bin/xmllint
 PERL =			/usr/bin/perl
-LATEX =			/Library/TeX/texbin/latex
-PDFLATEX =		/Library/TeX/texbin/pdflatex
+LATEX =			latex
+PDFLATEX =		pdflatex
 DBLATEX =		dblatex
 W3M =			w3m
 PANDOC =		pandoc
@@ -395,7 +395,7 @@ PANDOC =		pandoc
 ###
 ### Script language program used to create internal symbol tables
 ###
-MKSYMTBL_PROGRAM =	
+MKSYMTBL_PROGRAM =	/usr/bin/perl
 
 ###
 ### Switch to create internal symbol table selectively

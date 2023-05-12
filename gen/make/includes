@@ -21,30 +21,30 @@
 # latter case, because there are no machine-generated OS-specific
 # headers.
 
-ISC_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isc/include \
+ISC_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isc/include \
 	-I${top_srcdir}/lib/isc \
 	-I${top_srcdir}/lib/isc/include \
 	-I${top_srcdir}/lib/isc/unix/include \
 	-I${top_srcdir}/lib/isc/pthreads/include \
 	-I${top_srcdir}/lib/isc/noatomic/include
 
-ISCCC_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isccc/include \
+ISCCC_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccc/include \
        -I${top_srcdir}/lib/isccc/include
 
-ISCCFG_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/isccfg/include \
+ISCCFG_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/isccfg/include \
        -I${top_srcdir}/lib/isccfg/include
 
-DNS_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/dns/include \
+DNS_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/dns/include \
 	-I${top_srcdir}/lib/dns/include
 
-IRS_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/irs/include \
+IRS_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/irs/include \
 	-I${top_srcdir}/lib/irs/include
 
-LWRES_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/lwres/include \
+LWRES_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/lwres/include \
 	-I${top_srcdir}/lib/lwres/unix/include \
 	-I${top_srcdir}/lib/lwres/include
 
-BIND9_INCLUDES = -I/Users/ariel/git/darling/src/external/bind9/gen/lib/bind9/include \
+BIND9_INCLUDES = -I/Volumes/CaseSensitive/git/darling-bind9/gen/lib/bind9/include \
 	-I${top_srcdir}/lib/bind9/include
 
 TEST_INCLUDES = \

@@ -83,7 +83,7 @@
 /*
  * Defined this system needs vsnprintf() and snprintf().
  */
-#undef LWRES_PLATFORM_NEEDVSNPRINTF
+#define LWRES_PLATFORM_NEEDVSNPRINTF 1
 
 /*
  * If this system need a modern sprintf() that returns (int) not (char*).
@@ -93,7 +93,7 @@
 /*
  * The printf format string modifier to use with lwres_uint64_t values.
  */
-#define LWRES_PLATFORM_QUADFORMAT "ll"
+#define LWRES_PLATFORM_QUADFORMAT "l"
 
 /*! \brief
  * Define if this system needs strtoul.

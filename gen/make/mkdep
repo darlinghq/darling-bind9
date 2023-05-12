@@ -134,7 +134,7 @@ MKDEPPROG=""
 if [ X"${MKDEPPROG}" != X ]; then
     /bin/sh -c "${MKDEPPROG} ${newargs}"
 else
-    /Users/ariel/private-bin/clang -M ${newargs} |
+    gcc -M ${newargs} |
     sed "
 	s; \\./; ;g
 	s; \\\\; ;g

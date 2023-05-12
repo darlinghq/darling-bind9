@@ -46,6 +46,9 @@ foreach(EXE IN ITEMS dig host nslookup)
 		# but Apple adds it to their build, so we do, too
 		IOKit
 		CoreFoundation
+
+		# Apple doesn't seems to require this, but build error seems to occur without this.
+		xml2
 	)
 endforeach()
 

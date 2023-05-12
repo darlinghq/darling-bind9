@@ -17,11 +17,11 @@
 
 # $Id: isc-config.sh.in,v 1.17 2007/06/19 23:46:59 tbox Exp $
 
-prefix=/usr
+prefix=/usr/local
 exec_prefix=${prefix}
 exec_prefix_set=
-includedir=/usr/local/include
-libdir=/usr/local
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
 
 usage()
 {
@@ -165,7 +165,7 @@ if test x"$echo_libs" = x"true"; then
 		needothers=true
 	fi
 	if test x"$needothers" = x"true" ; then
-		libs="$libs  -ldl -lpthread "
+		libs="$libs  -ldl -lpthread  -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -lxml2 -lz -lpthread -licucore -lm"
 	fi
 	echo $libs
 fi

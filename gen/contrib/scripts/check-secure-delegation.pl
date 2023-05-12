@@ -26,7 +26,7 @@ use POSIX qw/strftime/;
 # the crypto will likely succeed.  If it fails then the crypto will definitely
 # fail.
 #
-$prefix = "/usr";
+$prefix = "/usr/local";
 $dig = "$prefix/bin/dig +cd +dnssec +noall +answer";
 $dsfromkey = "$prefix/sbin/dnssec-dsfromkey -1 -A -f /dev/stdin";
 

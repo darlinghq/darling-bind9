@@ -146,7 +146,7 @@ int sigwait(const unsigned int *set, int *sig);
 #define HAVE_UNAME 1
 
 /* Define if building universal (internal helper macro) */
-#define AC_APPLE_UNIVERSAL_BUILD 1
+/* #undef AC_APPLE_UNIVERSAL_BUILD */
 
 /* Use AES for Source Identity Token generation */
 /* #undef AES_SIT */
@@ -335,7 +335,7 @@ int sigwait(const unsigned int *set, int *sig);
 /* #undef HAVE_LIBTHR */
 
 /* Define if libxml2 was found */
-/* #undef HAVE_LIBXML2 */
+#define HAVE_LIBXML2 1
 
 /* Define to 1 if you have the <linux/capability.h> header file. */
 /* #undef HAVE_LINUX_CAPABILITY_H */
@@ -380,7 +380,7 @@ int sigwait(const unsigned int *set, int *sig);
 /* #undef HAVE_OPENSSL_GOST */
 
 /* Define if your PKCS11 provider supports ECDSA. */
-/* #undef HAVE_PKCS11_ECDSA */
+#define HAVE_PKCS11_ECDSA 1
 
 /* Define if your PKCS11 provider supports GOST. */
 /* #undef HAVE_PKCS11_GOST */
